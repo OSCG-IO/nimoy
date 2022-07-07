@@ -1,0 +1,31 @@
+dump_dir=/db/dump_dir
+this_dir=`pwd`
+RUN=$this_dir/benchmarksql/run
+PSSH="pssh -i -h hosts"
+PSCP="pscp -h hosts"
+pgXX=pg11
+BIGSQL=/db/bigsql
+apg=$BIGSQL/apg
+PG=$BIGSQL/$pgXX
+psql="$PG/bin/psql -U postgres"
+
+key1=
+ip_d1=
+ip_n1=
+ssh_d1=ec2-user@$ip_d1
+ssh_n1=ec2-user@$ip_n1
+
+key2=
+ip_d2=
+ip_n2=
+ssh_d2=ec2-user@$ip_d2
+ssh_n2=ec2-user@$ip_n2
+
+export DRIVER1=driver1-1   
+export NODE1=node1-1
+export NODE1_IP=$ip_n1
+
+export DRIVER2=driver2-1
+export NODE2=node2-1
+export NODE2_IP=$ip_n2
+
