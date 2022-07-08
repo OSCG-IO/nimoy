@@ -1,4 +1,4 @@
 PSSH="pssh -i -h hosts"
 
-$PSSH 'cd /db; python -c "$(curl -fsSL https://bigsql-download.s3.amazonaws.com/REPO/install.py)"'
+$PSSH 'cd /db; python3 -c "$(curl -fsSL https://oscg-io-download.s3.amazonaws.com/REPO/install.py)"'
 
