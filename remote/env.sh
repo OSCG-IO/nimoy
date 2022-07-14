@@ -3,10 +3,10 @@ this_dir=`pwd`
 RUN=$this_dir/benchmarksql/run
 PSSH="pssh -i -h hosts"
 PSCP="pscp -h hosts"
-pgXX=pg11
-BIGSQL=/db/bigsql
-apg=$BIGSQL/apg
-PG=$BIGSQL/$pgXX
+pgXX=pg14
+IO_DIR=/db/oscg
+io=$IO_DIR/io
+PG=$IO_DIR/$pgXX
 psql="$PG/bin/psql -U postgres"
 
 DRIVER1=

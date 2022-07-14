@@ -34,8 +34,8 @@ rm -rf test
 mkdir test
 mkdir test/data
 cd test
-git clone https://github.com/bigsql/bigsql2
-git clone https://github.com/bigsql/nimoy
+git clone https://github.com/OSCG-IO/io
+git clone https://github.com/OSCG-IO/nimoy
 
 cd $HOME
 ANT=apache-ant-1.9.14-bin
@@ -63,12 +63,12 @@ ant clean
 ant
 
 cd $HOME
-if [ ! -d bigsql ]; then
-  python -c "$(curl -fsSL https://bigsql-download.s3.amazonaws.com/REPO/install.py)"
-  cd bigsql
-  ./apg install pg11
-  ./apg start pg11 -y
-  ./apg stop pg11
+if [ ! -d oscg ]; then
+  python3 -c "$(curl -fsSL https://oscg-io-download.s3.amazonaws.com/REPO/install.py)"
+  cd oscg
+  ./io install $pgXX
+  ./io start $pgXX -y
+  ./io stop $pgXX
 fi
 
 echo ""
