@@ -29,9 +29,9 @@ if [ ! -d "/db" ]; then
   sudo chmod 777 /db
 fi
 
-if [ -d "/db/bigsql" ]; then
-  echo "Echo stopping bigsql"
-  /db/bigsql/apg stop
+if [ -d "$IO_DIR" ]; then
+  echo "Echo stopping io"
+  $io stop
   sleep 2
 fi
 
